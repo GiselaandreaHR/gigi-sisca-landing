@@ -156,8 +156,19 @@
   @media(max-width:860px){
     .wrap{padding:0 20px}
     .nav-links,.nav-cta{display:none}
-    .burger{display:flex;flex-direction:column;gap:5px;margin-left:auto;background:none;border:none;cursor:pointer;padding:8px}
-    .burger span{width:24px;height:2.4px;background:var(--buttermilk);border-radius:2px}
+    .burger{display:flex;flex-direction:column;gap:5px;margin-left:auto;background:none;border:none;cursor:pointer;padding:8px;z-index:10}
+    .burger span{width:24px;height:2.4px;background:var(--buttermilk);border-radius:2px;transition:transform .25s,opacity .25s}
+    .nav{flex-wrap:wrap}
+    .nav.nav-open .nav-links{
+      display:flex;flex-direction:column;gap:0;width:100%;
+      padding:10px 0 6px;margin-top:10px;
+      border-top:1px solid rgba(245,238,205,.13);
+    }
+    .nav.nav-open .nav-links a{padding:12px 6px;font-size:16px;border-bottom:1px solid rgba(245,238,205,.1)}
+    .nav.nav-open .nav-links a:last-child{border-bottom:none}
+    .nav.nav-open .burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .nav.nav-open .burger span:nth-child(2){opacity:0}
+    .nav.nav-open .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
     .hero{padding:120px 20px 72px}
     .hero h1{font-size:clamp(36px,9vw,56px)}
     .hero .ctas{flex-direction:column;align-items:stretch;width:100%;max-width:320px}
@@ -190,7 +201,7 @@
       <a href="https://gigisisca.com" target="_blank" rel="noopener">People Consulting &#x2197;</a>
     </div>
     <a class="nav-cta" href="#reservar">Reservar</a>
-    <button class="burger" aria-label="Menú" onclick="document.querySelector('.nav-links').style.display='flex';this.style.display='none'">
+    <button class="burger" aria-label="Menú" onclick="this.closest('.nav').classList.toggle('nav-open')"
       <span></span><span></span><span></span>
     </button>
   </nav>

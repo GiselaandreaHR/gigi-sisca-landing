@@ -148,8 +148,20 @@
   @media(max-width:860px){
     .wrap{padding:0 20px}
     .nav-links,.nav-cta{display:none}
-    .burger{display:flex;flex-direction:column;gap:5px;margin-left:auto;background:none;border:none;cursor:pointer;padding:8px}
-    .burger span{width:24px;height:2.4px;background:var(--plum-espresso);border-radius:2px}
+    .burger{display:flex;flex-direction:column;gap:5px;margin-left:auto;background:none;border:none;cursor:pointer;padding:8px;z-index:10}
+    .burger span{width:24px;height:2.4px;background:var(--plum-espresso);border-radius:2px;transition:transform .25s,opacity .25s}
+    /* open state */
+    .nav{flex-wrap:wrap}
+    .nav.nav-open .nav-links{
+      display:flex;flex-direction:column;gap:0;width:100%;
+      padding:10px 0 6px;margin-top:10px;
+      border-top:1px solid rgba(231,222,203,.5);
+    }
+    .nav.nav-open .nav-links a{padding:12px 6px;font-size:16px;border-bottom:1px solid rgba(231,222,203,.25)}
+    .nav.nav-open .nav-links a:last-child{border-bottom:none}
+    .nav.nav-open .burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .nav.nav-open .burger span:nth-child(2){opacity:0}
+    .nav.nav-open .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
     .hero{padding:130px 0 70px}
     .hero .ctas{flex-direction:column;align-items:stretch;max-width:320px;gap:12px}
     .btn{justify-content:center}
@@ -186,7 +198,7 @@
       <a href="/tarot">Tarot ↗</a>
     </div>
     <a class="nav-cta" href="https://wa.me/5491150137049" target="_blank" rel="noopener">Hablemos</a>
-    <button class="burger" aria-label="Menú" onclick="document.querySelector('.nav-links').style.display='flex';this.style.display='none'">
+    <button class="burger" aria-label="Menú" onclick="this.closest('.nav').classList.toggle('nav-open')"
       <span></span><span></span><span></span>
     </button>
   </nav>
