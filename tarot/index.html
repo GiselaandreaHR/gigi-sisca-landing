@@ -5,7 +5,7 @@
 <script>document.documentElement.classList.add('js-anim');</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gigi Sisca · Tarot</title>
-<meta name="description" content="Tarot y conversacion. Una meet de 30 minutos: las cartas, una pregunta y vos.">
+<meta name="description" content="Tarot y conversación. Una meet de 30 minutos: las cartas, una pregunta y vos.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..700&display=swap" rel="stylesheet">
@@ -154,16 +154,24 @@
   .fdot.b{animation-duration:9s;animation-delay:-2.5s}
   @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.fdot{animation:none}}
   @media(max-width:860px){
-    .wrap{padding:0 24px}
+    .wrap{padding:0 20px}
     .nav-links,.nav-cta{display:none}
     .burger{display:flex;flex-direction:column;gap:5px;margin-left:auto;background:none;border:none;cursor:pointer;padding:8px}
     .burger span{width:24px;height:2.4px;background:var(--buttermilk);border-radius:2px}
-    .hero{padding:130px 22px 80px}
+    .hero{padding:120px 20px 72px}
+    .hero h1{font-size:clamp(36px,9vw,56px)}
     .hero .ctas{flex-direction:column;align-items:stretch;width:100%;max-width:320px}
     .btn{justify-content:center}
-    .origen-inner{grid-template-columns:1fr;gap:36px}
+    .pad{padding:clamp(56px,10vw,80px) 0}
+    .origen-inner{grid-template-columns:1fr;gap:32px}
+    .origen-number{font-size:72px}
+    .origen-quote p{font-size:17px}
     .que-grid{grid-template-columns:1fr}
-    footer .inner{flex-direction:column;align-items:flex-start;gap:22px}
+    .que-card{padding:26px 22px}
+    .reserva-card{padding:36px 24px}
+    .cierre-quote{font-size:clamp(22px,6vw,32px) !important;width:auto !important;white-space:normal !important}
+    footer .inner{flex-direction:column;align-items:flex-start;gap:18px}
+    footer .r{flex-wrap:wrap;gap:16px}
   }
 </style>
 </head>
@@ -174,15 +182,15 @@
   <nav class="nav">
     <a class="brand" href="#top">
       <span class="mark"></span>
-      <span><b>Gigi Sisca</b><small>Tarot &middot; Conversacion</small></span>
+      <span><b>Gigi Sisca</b><small>Tarot &middot; Conversación</small></span>
     </a>
     <div class="nav-links">
       <a href="#el-origen">El origen</a>
-      <a href="#que-es">Que es</a>
+      <a href="#que-es">Qué es</a>
       <a href="https://gigisisca.com" target="_blank" rel="noopener">People Consulting &#x2197;</a>
     </div>
     <a class="nav-cta" href="#reservar">Reservar</a>
-    <button class="burger" aria-label="Menu" onclick="document.querySelector('.nav-links').style.display='flex';this.style.display='none'">
+    <button class="burger" aria-label="Menú" onclick="document.querySelector('.nav-links').style.display='flex';this.style.display='none'">
       <span></span><span></span><span></span>
     </button>
   </nav>
@@ -201,13 +209,13 @@
       <span class="ring b"></span>
       <span class="mark"></span>
     </div>
-    <span class="eyebrow reveal d1">Tarot &middot; Conversacion &middot; A la gorra</span>
+    <span class="eyebrow reveal d1">Tarot &middot; Conversación &middot; A la gorra</span>
     <h1 class="reveal d2">No somos recursos.<em style="font-weight: 100;">Somos seres sociales en una experiencia espiritual.</em></h1>
     <div class="hero-divider reveal d3"></div>
     <p class="manifesto reveal d3">Una meet de 30 minutos. Las cartas, una pregunta y vos.</p>
     <div class="ctas reveal d4">
       <a class="btn btn-primary" href="#reservar">Reservar mi encuentro <span class="arrow">&#x2192;</span></a>
-      <a class="btn btn-outline" href="#el-origen">Entender por que <span class="arrow">&#x2192;</span></a>
+      <a class="btn btn-outline" href="#el-origen">Entender por qué <span class="arrow">&#x2192;</span></a>
     </div>
   </div>
 </header>
@@ -223,13 +231,13 @@
       </div>
       <div class="reveal d1">
         <div class="origen-text">
-          <p>Pase anos estudiando relaciones del trabajo, liderando equipos y desarrollando personas en estructuras organizacionales. Y en ese camino descubri algo que ya sabemos:</p>
-          <p><strong>Seguimos llamando &ldquo;recursos humanos&rdquo; a lo mas humano que tenemos.</strong></p>
-          <p>Las personas no son recursos. Son seres sociales con historia, con cuerpo, con linaje, con emociones, con preguntas que no caben en ninguna evaluacion de desempeno.</p>
-          <p>El tarot llego a mi vida como un lenguaje que intenta hacerle lugar a esas preguntas. Un espejo que no juzga. Un mapa de lo que somos cuando dejamos de ser lo que el sistema necesita que seamos.</p>
+          <p>Pasé años estudiando relaciones del trabajo, liderando equipos y desarrollando personas en estructuras organizacionales. Y en ese camino descubrí algo que ya sabemos:</p>
+          <p><strong>Seguimos llamando &ldquo;recursos humanos&rdquo; a lo más humano que tenemos.</strong></p>
+          <p>Las personas no son recursos. Son seres sociales con historia, con cuerpo, con linaje, con emociones, con preguntas que no caben en ninguna evaluación de desempeño.</p>
+          <p>El tarot llegó a mi vida como un lenguaje que intenta hacerle lugar a esas preguntas. Un espejo que no juzga. Un mapa de lo que somos cuando dejamos de ser lo que el sistema necesita que seamos.</p>
         </div>
         <div class="origen-quote">
-          <p>"Que alguien lea tarot no quiere decir que esa persona tiene mayor poder frente a otra. El tarot le da poder a uno mismo para tomar decisiones. No es el poder en relacion a los otros, sino a uno mismo."</p>
+          <p>"Que alguien lea tarot no quiere decir que esa persona tiene mayor poder frente a otra. El tarot le da poder a uno mismo para tomar decisiones. No es el poder en relación a los otros, sino a uno mismo."</p>
           <p class="attr">&mdash; Gabriela Sverdlick</p>
         </div>
       </div>
@@ -245,13 +253,13 @@
     <div class="que">
       <div class="que-head reveal">
         <span class="eyebrow">El espacio</span>
-        <h2 class="que-title">Que es este <em>espacio</em></h2>
+        <h2 class="que-title">Qué es este <em>espacio</em></h2>
       </div>
       <div class="que-grid">
         <div class="que-card reveal">
           <div class="que-symbol">&#x221E;</div>
           <p class="eyebrow">La herramienta</p>
-          <p class="body">El tarot como lenguaje simbolico milenario. Tres cartas, una pregunta, un espejo que invita a la reflexion.</p>
+          <p class="body">El tarot como lenguaje simbólico milenario. Tres cartas, una pregunta, un espejo que invita a la reflexión.</p>
         </div>
         <div class="que-card reveal d1">
           <div class="que-symbol">&#x25EF;</div>
@@ -265,7 +273,7 @@
         </div>
         <div class="que-card reveal d3">
           <div class="que-symbol">&#x2726;</div>
-          <p class="eyebrow">Para quien</p>
+          <p class="eyebrow">Para quién</p>
           <p class="body">Para cualquier persona, mayor de edad.</p>
         </div>
       </div>
@@ -283,7 +291,7 @@
         <div class="glow-s"></div>
         <div class="inner">
           <span class="eyebrow">Reserva tu momento</span>
-          <h2>Elegi tu <em>encuentro</em></h2>
+          <h2>Elegí tu <em>encuentro</em></h2>
           <p class="desc">Horarios disponibles en Argentina (GMT-3).</p>
           <div class="note">30 minutos</div>
           <div>
@@ -306,7 +314,7 @@
           <path d="M10 30 C10 18 22 18 30 30 C38 42 50 42 50 30 C50 18 38 18 30 30 C22 42 10 42 10 30Z" stroke="#FCB04F" stroke-width="2.5" fill="none"></path>
         </svg>
       </div>
-      <p class="cierre-quote" style="font-size: 38px; font-weight: 600; width: 800px; max-width: 100%; line-height: 1.35; text-wrap: normal; margin: 0 auto;">&ldquo;Ir hacia lo nuevo y desconocido confiando en el espiritu.<br><em style="white-space: nowrap;">Esa es la gran aventura.&rdquo;</em></p>
+      <p class="cierre-quote" style="font-size: 38px; font-weight: 600; width: 800px; max-width: 100%; line-height: 1.35; text-wrap: normal; margin: 0 auto;">&ldquo;Ir hacia lo nuevo y desconocido confiando en el espíritu.<br><em>Esa es la gran aventura.&rdquo;</em></p>
       <p class="cierre-attr">&mdash; Gigi Sisca</p>
     </div>
   </div>
@@ -320,7 +328,7 @@
         <span class="mark"></span>
         <b>Gigi Sisca</b>
       </div>
-      <div class="c">Tarot &middot; Conversacion &middot; 2026</div>
+      <div class="c">Tarot &middot; Conversación &middot; 2026</div>
       <div class="r">
         <a href="https://www.linkedin.com/in/gisela-andrea-sisca-43563373/" target="_blank" rel="noopener">LinkedIn &#x2197;</a>
         <a href="#reservar">Reservar</a>

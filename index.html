@@ -146,15 +146,27 @@
   @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.fdot{animation:none}}
   /* ---------- responsive ---------- */
   @media(max-width:860px){
-    .wrap{padding:0 24px}
+    .wrap{padding:0 20px}
     .nav-links,.nav-cta{display:none}
     .burger{display:flex;flex-direction:column;gap:5px;margin-left:auto;background:none;border:none;cursor:pointer;padding:8px}
     .burger span{width:24px;height:2.4px;background:var(--plum-espresso);border-radius:2px}
-    .hero{padding:150px 0 80px}
-    .srv{grid-template-columns:1fr;gap:14px;padding:30px 18px}
-    .sobre .inner{grid-template-columns:1fr;gap:36px}
-    .portrait{max-width:380px}
-    footer .inner{flex-direction:column;align-items:flex-start;gap:22px}
+    .hero{padding:130px 0 70px}
+    .hero .ctas{flex-direction:column;align-items:stretch;max-width:320px;gap:12px}
+    .btn{justify-content:center}
+    .logo-row{gap:20px}
+    .logo-row a img{height:44px}
+    .logo-row a[aria-label="Grupolar"] img{height:38px}
+    .propuesta{padding:52px 0 56px}
+    .servicios{padding:36px 0 72px}
+    .srv{grid-template-columns:1fr;gap:14px;padding:28px 16px}
+    .ia h2{font-size:clamp(36px,9vw,60px);line-height:1.05}
+    .contacto{padding:64px 0}
+    .contact-card p.big{font-size:clamp(22px,5vw,34px)}
+    .sobre{padding:36px 0 72px}
+    .sobre .inner{grid-template-columns:1fr;gap:32px}
+    .portrait{max-width:220px;margin-left:0}
+    footer .inner{flex-direction:column;align-items:flex-start;gap:18px}
+    footer .r{flex-wrap:wrap;gap:16px}
   }
 </style>
 </head>
